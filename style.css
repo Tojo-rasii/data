@@ -1,0 +1,833 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow-x: hidden;
+    background: #fff;
+}
+
+.divBody {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+a{
+    text-decoration: none;
+}
+
+div aside {
+    background: #00519e;
+    display: flex;
+    flex-direction: column;
+    gap: 1.7em;
+    padding: 1em;
+    height: 100vh;
+    position: fixed;
+    z-index: 9999;
+}
+
+div aside section:nth-child(1) article {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+    color: #fff;
+    font-weight: bold;
+    border-bottom: 1px solid #ebebeb;
+    font-size: 1.2em;
+    padding-bottom: 1.2em;
+}
+
+div aside article:nth-child(1) i {
+    padding: 0.2em;
+    padding-inline: 0.4em;
+    border: 2px solid #0084ff;
+    border-radius: 50%;
+}
+
+div aside section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+}
+
+div aside section article p {
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 1em;
+    color: #fff;
+}
+
+div aside section div {
+    background: #005db5;
+    padding: 0.4em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+    font-size: 0.9em;
+    color: silver;
+}
+
+div aside section div a {
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    padding: 0.4em;
+    text-decoration: none;
+    color: #fff;
+}
+
+div aside section div a:hover {
+    background: #00519e;
+
+}
+
+div header {
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+    padding: 0.5em;
+    border-bottom: 1px solid silver;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+}
+
+div header article:nth-child(1) {
+    background: #ebebeb;
+    padding: 0.3em;
+    padding-inline: 0.5em;
+    padding-inline-end: 1em;
+    border-radius: 2em;
+    display: flex;
+    flex-direction: row;
+    outline: 1px solid rgb(214, 214, 214);
+   margin-left: 1em;
+    align-items: center;
+    gap: 0.5em;
+}
+
+div header article:nth-child(1) i {
+    color: #005db5;
+}
+
+div header article:nth-child(1) input {
+    padding: 0.5em;
+    background: none;
+    width: 17em;
+    outline: none;
+    border: none;
+}
+
+div header article:nth-child(1) input:focus {
+    outline: none;
+    border: none;
+}
+div header article:nth-child(2){
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+}
+
+.bi-bell-fill {
+    background: #ebebeb;
+    font-size: 1.2em;
+    padding: 0.4em;
+    padding-inline: 0.6em;
+    border-radius: 50%;
+    color: #005db5;
+}
+
+.bi-bell-fill::after {
+    content: '';
+    position: absolute;
+    background: rgb(234, 0, 0);
+    outline: 2px solid #fff;
+    margin-top: -0.3em;
+    padding: 0.3em;
+    border-radius: 50%;
+}
+.profile{
+    padding: 0;
+}
+.profile img{
+    width: 2.8em;
+    height: 2.8em;
+    object-fit: cover;
+    outline: 2px solid #f6f6f6;
+    border-radius: 50%;
+}
+
+/* BODY */
+.mainBody {
+    width: 84.5vw;
+}
+
+.mainBody main {
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.mainBody main section:nth-child(1) article p {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 0.3em;
+    margin-left: 0.8em;
+    margin-bottom: 0;
+    color: #005db5;
+}
+
+.sectionBody {
+    background: #fff;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.sectionBody section:nth-child(1) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+}
+
+.sectionBody section:nth-child(1) article p {
+    font-size: 1em !important;
+}
+
+.sectionBody section:nth-child(1) article:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+}
+
+.sectionClesStat {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.sectionClesStat div:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sectionClesStat div:nth-child(2) article {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    background: #ebebeb;
+    padding: 0.5em;
+    padding-bottom: 1.5em;
+    margin-inline: 1.5em;
+    margin-top: 0;
+    width: 15em;
+    border-radius: 0.2em;
+}
+.sectionClesStat div:nth-child(2) article:nth-child(odd){
+    background: #e0f0ff;
+}
+.sectionClesStat div:nth-child(2) article p:nth-child(1) {
+    border-bottom: 1px solid silver;
+    padding-bottom: 0.2em;
+}
+
+.sectionClesStat div:nth-child(2) article p:nth-child(2) {
+    font-size: 2em;
+    /* outline: 1px solid #e0e0e0; */
+    padding: 0.4em;
+    border-radius: 1%;
+}
+
+.Graphique{
+    margin: 1em;
+}
+
+.Graphique p{
+    font-weight: 600;
+    color: #005db5;
+}
+.pointer{
+    cursor: pointer;
+}
+.active::after{
+   content: "";
+   position: absolute;
+   padding: 0.1em;
+   background: #005db5;
+   width:12em;
+   margin-top: 2em;
+   margin-left: -12.5em;
+}
+/* CHART STAT */
+#activityChart {
+    scale: 1;
+    background: #f9f9f9;
+    padding: 1em;
+}
+
+/* LIST DES DOCUMENT */
+.listSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.hr{
+    margin-top: 1.5em;
+    margin-inline: 1.5em;
+    margin-bottom: 0;
+}
+
+.listSection article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 1em;
+    margin-top: 0;
+}
+
+.listSection article:hover {
+    background: #ebebeb;
+    border-left: 3px solid #0084ff;
+}
+
+/* ACTION RAPIDE */
+.flexRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flexRow article:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2em;
+}
+
+.flexRow article:nth-child(2) span {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    cursor: pointer;
+    padding: 0.7em;
+    border-radius: 0.3em;
+}
+
+.flexRow article:nth-child(2) span:nth-child(1) {
+    background: rgb(231, 201, 7);
+}
+
+.flexRow article:nth-child(2) span:nth-child(2) {
+    background: rgb(9, 211, 9);
+}
+
+.flexRow article:nth-child(2) span:nth-child(3) {
+    background: silver;
+}
+
+/* LIST UTILISATEUR */
+.listUserSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.listUserSection article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 1em;
+}
+
+.listUserSection article:hover {
+    background: #ebebeb;
+}
+
+/* NAVBAR HOME */
+.NavbarHome {
+    background: #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.6em;
+    position: fixed;
+}
+
+.NavbarHome article {
+    display: flex;
+    flex-direction: row;
+    color: #0084ff;
+    gap: 1em;
+}
+
+.NavbarHome article:nth-child(1) {
+    font-size: 1.3em;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: row;
+    font-weight: 600;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.NavbarHome article:nth-child(1) i {
+    padding: 0.2em;
+    padding-inline: 0.4em;
+    border: 2px solid #0084ff;
+    border-radius: 50%;
+}
+
+.NavbarHome article ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+}
+
+.NavbarHome article ul li {
+    cursor: pointer;
+}
+
+.NavbarHome article button {
+    background: #0084ff;
+    color: #fff;
+    padding: 0.9em;
+    padding-inline: 1.6em;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 2em;
+}
+
+.mainHome {
+    width: 100%;
+}
+
+.mainHome section:nth-child(1) {
+    background-image: url('https://img.freepik.com/free-vector/blue-futuristic-waves-background-vector-with-computer-code-technology_53876-110867.jpg?w=740&t=st=1718178571~exp=1718179171~hmac=68af01536b5bc714801317d80f3f238e6464f61c32757876498efaf8ca13bf58');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5em;
+    height: 98vh;
+}
+
+.mainHome section:nth-child(1) article {
+    width: 44em;
+    background: transparent;
+    color: #fff;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.mainHome section:nth-child(1) article div:nth-child(1) {
+    font-size: 2.2em;
+    margin-top: 1.5em;
+}
+
+.mainHome section:nth-child(1) article div:nth-child(1) p:nth-child(1) {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.mainHome section:nth-child(1) article div button {
+    cursor: pointer;
+    background: #0084ff;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 1em;
+    padding-inline: 2em;
+    border-radius: 2em;
+    outline: none;
+    border: none;
+    font-weight: 600;
+}
+
+.mainHome section:nth-child(1) article div button:hover {
+    opacity: 0.9;
+}
+
+.mainHome section:nth-child(1) article div button:active {
+    outline: 2px solid #fff;
+}
+
+.mainHome section:nth-child(2) {
+    background: #fff;
+    padding: 1em;
+    box-shadow: 0 0 2px silver;
+    padding-top: 2em;
+    padding-bottom: 4em;
+    margin-top: -8em;
+    margin-left: 9em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    width: 78vw;
+}
+
+.mainHome section:nth-child(2) article picture {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    color: #0084ff;
+}
+
+.mainHome section:nth-child(2) article button {
+    background: none;
+    border: none;
+    outline: 1px solid #0084ff;
+    padding-inline: 1.5em !important;
+    border-radius: 2em;
+    padding: 0.7em;
+    color: #0084ff;
+    cursor: pointer;
+    transition: 0.2s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+    font-weight: 600;
+}
+
+.mainHome section:nth-child(2) article button i {
+    font-size: 2em;
+}
+
+.mainHome section:nth-child(2) article button:hover {
+    background: #0084ff;
+    color: #fff;
+}
+
+.mainHome section:nth-child(2) article i {
+    font-size: 4.5em;
+}
+
+.mainHome section:nth-child(2) article ul {
+    list-style-type: none;
+}
+
+.mainHome section:nth-child(2) article {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.OurSolution {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 3em;
+    margin: 1em;
+    margin-left: 5em !important;
+}
+
+.OurSolution article {
+    width: 25em;
+}
+
+.OurSolution article:nth-child(1) p:nth-child(1) {
+    font-size: 3em;
+    font-weight: 700;
+    color: #0084ff;
+    text-transform: uppercase;
+    margin-bottom: 0.4em;
+}
+
+.OurSolution article:nth-child(1) button {
+    border-radius: 2em;
+    padding-inline: 1.5em !important;
+    padding: 1em;
+    margin-top: 2em;
+    background: #0084ff;
+    color: #fff;
+    border: none;
+    outline: none;
+}
+
+.OurSolution article:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1em;
+    flex-wrap: wrap;
+    background: #fff;
+    width: 50em;
+    padding: 1em;
+}
+
+.OurSolution article:nth-child(2) div div {
+    width: 20em;
+    background: #ebebeb;
+    padding-top: 0 !important;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1em;
+}
+
+.OurSolutiondiv1,
+.OurSolutiondiv2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.OurSolutiondiv1 {
+    margin-top: 3em;
+}
+
+.OurSolutiondiv1 div:first-child {
+    background: #e0f0ff !important;
+}
+
+.OurSolutiondiv2 div:last-child {
+    background: #e0f0ff !important;
+}
+
+.OurSolution article:nth-child(2) div i {
+    font-size: 4em;
+    margin-bottom: 0;
+}
+
+.OurSolution article:nth-child(2) div p:nth-child(2) {
+    font-size: 1.5em !important;
+    margin-top: -0.5em !important;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #0084ff;
+}
+
+.OurSolution article:nth-child(2) div button {
+    background: none;
+    padding: 0.7em;
+    padding-inline: 1em;
+    border-radius: 2em;
+    outline: 1px solid #000;
+    border: none;
+    margin: 0.5em auto;
+    width: max-content;
+}
+
+footer {
+    background: #ebebeb;
+    padding-bottom: 0;
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border-top: 2px solid rgb(217, 217, 217);
+}
+
+footer section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1.5em;
+}
+
+footer section article:nth-child(1) {
+    width: 15em;
+}
+
+footer section article:nth-child(1) picture i {
+    font-size: 2.2em;
+    color: #0084ff;
+    padding: 0.2em;
+    padding-inline: 0.4em;
+    border: 3px solid #0084ff;
+    border-radius: 50%;
+}
+
+footer section:nth-child(1) article:nth-child(1) picture p {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #0084ff;
+    margin-top: 0.7em;
+    margin-bottom: 0.5em;
+}
+
+footer section article ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    list-style-type: none;
+}
+
+footer section article ul li:nth-child(1) {
+    color: #0084ff;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+footer section article:last-child {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+footer section article:last-child i {
+    font-size: 1.4em;
+    padding: 0.3em;
+    outline: 2px solid rgb(228, 228, 228);
+    border-radius: 1%;
+    height: max-content;
+    color: #0084ff;
+}
+
+footer section:nth-child(2) {
+    background: #d7d7d7;
+    padding: 0.5em;
+}
+
+.copy {
+    margin-top: 1em;
+
+}
+
+/* LOGIN */
+.mainLog {
+    padding: 1em;
+    border-radius: 0.3em;
+    background: transparent;
+    color: #fff;
+}
+
+.mainLog div {
+    margin-left: -7.5em;
+    margin-top: 4em;
+    background: transparent;
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 90vw;
+    height: 80vh;
+    background-size: 50%;
+}
+
+.mainLog div section:nth-child(2) {
+    display: flex;
+    margin-left: -57em;
+    flex-direction: column;
+
+}
+
+.mainLog div section:nth-child(2) div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: center;
+    gap: 1em;
+    margin-top: 1em;
+    height: max-content;
+    padding: 3em;
+    width: max-content;
+    padding-top: 1em;
+}
+.mainLog div section:nth-child(2) div:nth-child(1) article:nth-child(1){
+    margin: 0 auto;
+}
+.mainLog div section:nth-child(2) div:nth-child(1) article:nth-child(1) p:nth-child(1){
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.mainLog div section:nth-child(2) div:nth-child(2) {
+    height: max-content;
+    width: 31.4vw;
+    padding: 0.5em;
+    text-align: center;
+    padding-bottom: 2em;
+    margin-top: -3em;
+}
+
+.mainLog div section:nth-child(2) div:nth-child(2) figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.mainLog div section:nth-child(2) div:nth-child(2) figure article:nth-child(1) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    outline: none;
+    padding: 0;
+}
+
+.mainLog div section:nth-child(2) div:nth-child(2) figure article {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    gap: 1em;
+    outline: 1px solid silver;
+    padding: 1em;
+    width: 18em;
+    cursor: pointer;
+}
+
+/* GOOGLE CONNECT */
+.connectGoogle {
+    width: max-content !important;
+}
+
+.mainLog div section:nth-child(2) article:nth-child(2) form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: max-content;
+}
+
+.mainLog div section:nth-child(2) article:nth-child(2) form input {
+    padding: 1em;
+    width: 25em;
+    border: none;
+    border-radius: 0.2em;
+}
+
+.mainLog div section:nth-child(2) article:nth-child(2) form label input {
+    padding: 1em;
+    width: 2em;
+}
+.mainLog div section:nth-child(2) div:nth-child(1) article input[type='submit']{
+    background: #005db5;
+}
